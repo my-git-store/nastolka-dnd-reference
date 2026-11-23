@@ -5,7 +5,6 @@ import { useRoute } from 'vue-router'
 import { sheetTheme } from '../../../styles/sheetTheme'
 
 const route = useRoute()
-const attributionUrl = `${import.meta.env.BASE_URL}licenses/srd-5.2.1.txt`
 </script>
 
 <template>
@@ -31,9 +30,11 @@ const attributionUrl = `${import.meta.env.BASE_URL}licenses/srd-5.2.1.txt`
           </RouterView>
         </main>
         <footer class="credits">
-          <a href="https://www.dndbeyond.com/srd">SRD 5.2.1</a> ·
-          Русский перевод — <a href="https://rules.omnisgm.com">OmnisGM</a> ·
-          <a :href="attributionUrl">Источники и лицензия CC BY 4.0</a>
+          <p><a href="https://dtf.ru/boardgames/3178418-reliz-perevoda-knigi-igroka-2024">Книга игрока 2024 — страница русского перевода Koroz</a></p>
+          <p>
+            Справочник составлен по <a href="https://www.dndbeyond.com/srd">открытым правилам D&amp;D (SRD 5.2.1)</a>
+            Wizards of the Coast. Перевод правил — <a href="https://rules.omnisgm.com">OmnisGM</a>.
+          </p>
         </footer>
       </div>
     </div>
@@ -109,6 +110,8 @@ const attributionUrl = `${import.meta.env.BASE_URL}licenses/srd-5.2.1.txt`
 }
 .reference-content { padding-block: clamp(1.5rem, 3.7vw, 3rem); }
 .credits {
+  display: grid;
+  gap: .4rem;
   padding-block: .9rem 1.25rem;
   border-top: 1px solid var(--color-accent);
   color: var(--color-primary-950);
