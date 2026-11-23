@@ -1,0 +1,12 @@
+This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.
+
+Русский перевод и подготовка Markdown: © 2026 Petr Radilov (OmnisGM), https://rules.omnisgm.com. Перевод опубликован под CC BY 4.0.
+Источник перевода: https://github.com/OmnisGM-App/OmnisGM-Rules/tree/1f7192be159e84f2db7212565866747094e3b9de/src/dnd/srd-5.2
+
+В этой версии главы о заклинаниях, монстрах и животных разделены на карточки. В бестиарий включены также блоки характеристик из магических предметов и заклинаний. Названия и параметры вынесены в указатель. Оформление таблиц и вложенных блоков адаптировано для экрана. По английскому оригиналу SRD 5.2.1 уточнены материальные компоненты Divination, Circle of Death и True Seeing, эффекты Fireball и Spiritual Weapon, правила расходования легендарных действий и особые условия применения заклинаний существами.
+
+Для русского указателя редакция сверила названия по английским именам и сохранила варианты для поиска. Употребление названий дополнительно проверено по русскому указателю https://next.dnd.su/bestiary/ и списку карт Adventures in the Forgotten Realms издательства Wizards of the Coast (https://media.wizards.com/2021/downloads/card-sets/AFR_Cardlist_07112021.pdf). Список карт служил только для сверки русских названий.
+
+Реакции 20 существ и особенность «Магия ковена» трёх карг переведены редакцией по английскому SRD 5.2.1. У молодого белого дракона в таблице сохранено печатное значение спасброска Интеллекта и отмечено расхождение с карточкой https://www.dndbeyond.com/monsters/5195287-young-white-dragon.
+
+Условия лицензии и отказ от гарантий: https://creativecommons.org/licenses/by/4.0/legalcode.

@@ -1,0 +1,50 @@
+:root {
+  color-scheme: light;
+  --font-base: 'Plus Jakarta Sans Variable', 'Plus Jakarta Sans', Arial, sans-serif;
+  --font-serif: 'Lora Variable', Lora, Georgia, serif;
+  --color-primary-1000: #3e2c1c;
+  --color-primary-950: #5a4430;
+  --color-secondary-1000: #8b7355;
+  --color-secondary-text: #665541;
+  --color-accent: #d4c4b5;
+  --color-burgundy: #793c44;
+  --sheet-map: url('../assets/character-sheet-parchment.webp');
+  --sheet-paper: #e9dbc2;
+  --sheet-panel: #fff8e9;
+  --sheet-line: rgba(132, 92, 43, .32);
+  --sheet-radius: 16px;
+  --sheet-input-radius: 12px;
+  --sheet-control-height: 44px;
+  --sheet-shadow: 0 8px 28px rgba(83, 59, 38, .14);
+  background-color: var(--sheet-paper);
+  color: var(--color-primary-1000);
+  font-family: var(--font-base);
+  line-height: 1.5;
+  scrollbar-gutter: stable;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; }
+body, #app { min-height: 100vh; }
+h1, h2, h3, p { margin: 0; }
+button, input, select { font: inherit; }
+button { color: inherit; }
+a { color: inherit; text-underline-offset: .18em; }
+:focus-visible { outline: 2px solid var(--color-burgundy); outline-offset: 3px; }
+
+/* An independent fixed layer keeps the map's scale independent of the result count. */
+body::before {
+  content: '';
+  position: fixed;
+  z-index: -1;
+  inset: 0;
+  min-height: 100lvh;
+  pointer-events: none;
+  background-color: var(--sheet-paper);
+  background-image:
+    linear-gradient(rgba(249, 239, 218, .26), rgba(230, 205, 165, .2)),
+    var(--sheet-map);
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
