@@ -5,6 +5,11 @@ import { useRoute } from 'vue-router'
 import { sheetTheme } from '../../../styles/sheetTheme'
 
 const route = useRoute()
+const [handbookUrl] = Object.values(import.meta.glob<string>('/src/assets/books/players-handbook-2024-ru.pdf', {
+  eager: true,
+  query: '?url',
+  import: 'default',
+}))
 </script>
 
 <template>
@@ -30,11 +35,17 @@ const route = useRoute()
           </RouterView>
         </main>
         <footer class="credits">
-          <p><a href="https://dtf.ru/boardgames/3178418-reliz-perevoda-knigi-igroka-2024">Книга игрока 2024 — страница русского перевода Koroz</a></p>
-          <p>
-            Справочник составлен по <a href="https://www.dndbeyond.com/srd">открытым правилам D&amp;D (SRD 5.2.1)</a>
-            Wizards of the Coast. Перевод правил — <a href="https://rules.omnisgm.com">OmnisGM</a>.
-          </p>
+          <details>
+            <summary>{{ handbookUrl ? 'Книга и источники' : 'Источники' }}</summary>
+            <p v-if="handbookUrl">
+              <a :href="handbookUrl" target="_blank" rel="noopener noreferrer">Книга игрока 2024</a>
+              — PDF на русском языке, перевод Koroz.
+            </p>
+            <p>
+              Справочник составлен по <a href="https://www.dndbeyond.com/srd">открытым правилам D&amp;D (SRD 5.2.1)</a>
+              Wizards of the Coast. Перевод правил — <a href="https://rules.omnisgm.com">OmnisGM</a>.
+            </p>
+          </details>
         </footer>
       </div>
     </div>
@@ -110,13 +121,13 @@ const route = useRoute()
 }
 .reference-content { padding-block: clamp(1.5rem, 3.7vw, 3rem); }
 .credits {
-  display: grid;
-  gap: .4rem;
   padding-block: .9rem 1.25rem;
   border-top: 1px solid var(--color-accent);
   color: var(--color-primary-950);
   font-size: .85rem;
 }
+.credits summary { width: fit-content; padding-block: .35rem; cursor: pointer; font-weight: 600; }
+.credits p { margin-top: .4rem; }
 .credits a { text-decoration: underline; text-underline-offset: .17em; }
 
 @media (max-width: 38rem) {

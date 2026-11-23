@@ -5,3 +5,4 @@ dist/
 .env.*
 *.local
 .DS_Store
+/src/assets/books/players-handbook-2024-ru.pdf
