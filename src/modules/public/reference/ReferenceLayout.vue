@@ -3,13 +3,9 @@ import { NConfigProvider } from 'naive-ui/es/config-provider'
 import ruRU from 'naive-ui/es/locales/common/ruRU'
 import { useRoute } from 'vue-router'
 import { sheetTheme } from '../../../styles/sheetTheme'
+import handbookUrl from '../../../assets/books/players-handbook-2024-ru.pdf?url'
 
 const route = useRoute()
-const [handbookUrl] = Object.values(import.meta.glob<string>('/src/assets/books/players-handbook-2024-ru.pdf', {
-  eager: true,
-  query: '?url',
-  import: 'default',
-}))
 </script>
 
 <template>
@@ -36,8 +32,8 @@ const [handbookUrl] = Object.values(import.meta.glob<string>('/src/assets/books/
         </main>
         <footer class="credits">
           <details>
-            <summary>{{ handbookUrl ? 'Книга и источники' : 'Источники' }}</summary>
-            <p v-if="handbookUrl">
+            <summary>Книга и источники</summary>
+            <p>
               <a :href="handbookUrl" target="_blank" rel="noopener noreferrer">Книга игрока 2024</a>
               — PDF на русском языке, перевод Koroz.
             </p>
